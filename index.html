@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facescreen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="bilder/favicon.png" sizes="160x160">
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <ul>
+                <li><a class="navbarLink" href="#forum">Forum</a></li>
+                <li><a class="navbarLink" href="#chat">Chat</a></li>
+                <li>
+                    <div class="dropdown">
+                        <input type="text" value="søk" id="sok" class="navbarLink"></input>
+                        <div class="dropdown-content">
+                            <p>SEARCH HERE!</p>
+                        </div>
+                    </div>
+                </li>
+                <li><button class="navbarLink" id="popup">sikkerhet</button></li>
+            </ul>
+        </div>
+        <div id="sikkerhet">
+            <div id="sikkerhet-content">
+                <button id="exit">
+                    <svg id="cross" height="90%" width="90%" viewBox="0 0 200 200">
+                        <line x1="200" y1="0" x2="0" y2="200" style="stroke:rgb(0, 0, 0);stroke-width:10" />
+                        <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(0, 0, 0);stroke-width:10" />
+                    </svg>
+                </button>
+                <div id="animation"></div>
+                <article>
+                    <h1>Sikkerhetstiltak</h1>
+                        <p>Hva kan du gjøre for ikke å miste brukeren din?:</p>
+                        <ol>
+                            <li>Hvis du ønsker å holde brukeren din beskyttet må du ikke dele passordet ditt med andre</li>
+                            <li>Du må ha et passord som er langt og komplisert. et eksempel på et dårlig passord er "dogcats" som vil bli hacket innen 11 minutter i følge:
+                                ( <a href="https://www.betterbuys.com/estimating-password-cracking-times/" style="color: white;">https://www.betterbuys.com/estimating-password-cracking-times/</a> )</li>
+                            <li>Videre må du heller ikke laste ned programmer som virker utrygge. Det kan hende at programet stjeler brukerinformasjonen din</li>
+                        </ol>
+                </article>
+            </div>
+        </div>
+
+        <div id="feed">
+                <div id="popular-users">
+                    <article>
+                        <h1>Popular users</h1>
+                        <p>
+                        <ul>
+                            <li> <div id="hacker"></div> 
+                                <h4>...</h4>
+                                <p> Total: 999999 likes</p>
+                            </li>
+                            <li> <div id="popular_person"></div> 
+                                <h4>David</h4>
+                                <p> Total: 83 likes</p>
+                            </li>
+                            <li> <div id="steve"></div> 
+                                <h4>Steve</h4>
+                                <p> Total: 56 likes </p>
+                            </li>
+                        </ul>
+                    </p>
+                    </article>
+                </div>
+            <div id="sendBox">
+                <textarea class="sending"name="sending"></textarea>
+                <button class="pushSend">
+                    <p>Send<p>
+                </button>
+            </div>
+            <div id="dark"></div>
+        </div>
+    </div>
+    <script>
+        firebaseSetup()
+        styleSetup()
+    </script>
+</body>
+</html>
