@@ -40,7 +40,7 @@ function firebaseSetup() {
         console.log(connectedBox)
 
         //createPost(connectedBox);
-        sendToFirebase("post", "1", connectedBox, "1")
+        sendToFirebase("post", "1", connectedBox, "6")
     }
 
     function displayPost(snapshot) {
